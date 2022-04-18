@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body>
+
+
+<div class="grid-container">
+    <div class="grid-item">
+        <form name="form1">
+            <div class="container">
+                <h1>Registration 1</h1>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+
+                <label for="email" ><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" id="email" required>
+                <div id="message1">
+                    <h3>Sample format is: mysite@email.com</h3>
+                    <p id="emailVal" class="invalid"><b>Email</b></p>
+                </div>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                <div id="message">
+                    <h3>Password must contain the following:</h3>
+                    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                    <p id="number" class="invalid">A <b>number</b></p>
+                    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                </div>
+
+                <label for="conf-psw"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" id="conf-psw" required>
+                <hr>
+
+                <button type="submit" class="registerbtn">Register</button>
+            </div>
+        </form>
+
+    </div>
+
+
+    <div></div>
+    <div class="grid-item">
+        <form name="form2">
+            <div class="container">
+                <h1>Registration 2</h1>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" id="email2" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+
+                <label for="conf-psw2"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" id="conf-psw2" required>
+                <hr>
+
+                <button type="submit" class="registerbtn" onclick="ValidateEmail(document.form2.email)">Register</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+</body>
+</html>
+<script src="java.js"></script>
+
+
+
